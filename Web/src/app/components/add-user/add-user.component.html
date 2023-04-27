@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="container">
+    <form (submit)="AddUser()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          required
+          [(ngModel)]="newUser.name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="last-name"
+          name="last-name"
+          required
+          [(ngModel)]="newUser.lastName"
+        />
+      </div>
+      <div class="form-group">
+        <label for="card-number">Card Number:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="card-number"
+          name="card-number"
+          required
+          pattern="\d{16}"
+          [(ngModel)]="newUser.cardNumber"
+        />
+      </div>
+      <div class="form-group">
+        <label for="card-pin">Card PIN:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="card-pin"
+          name="card-pin"
+          required
+          pattern="\d{4}"
+          [(ngModel)]="newUser.cardPin"
+        />
+      </div>
+      <div class="form-group">
+        <label for="card-cvv">Card CVV:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="card-cvv"
+          name="card-cvv"
+          required
+          pattern="\d{3}"
+          [(ngModel)]="newUser.cardCvv"
+        />
+      </div>
+      <div class="form-group">
+        <label for="card-expiration-date">Card Expiration Date:</label>
+        <input
+          type="date"
+          class="form-control"
+          id="card-expiration-date"
+          name="card-expiration-date"
+          required
+          [(ngModel)]="newUser.cardExpirationDate"
+        />
+      </div>
+      <div class="form-group">
+        <label for="user-image">User Image:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="user-image"
+          name="user-image"
+          required
+          [(ngModel)]="newUser.userImage"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mt-4">Add User</button>
+    </form>
+  </div>
+</div>

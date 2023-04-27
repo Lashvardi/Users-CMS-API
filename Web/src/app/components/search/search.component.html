@@ -1,0 +1,14 @@
+<div class="form-group">
+    <label for="search-card-number">Search by Card Number:</label>
+    <input type="text" class="form-control" id="search-card-number" name="search-card-number" required
+           [(ngModel)]="searchCardNumber">
+</div>
+
+<button type="button" class="btn btn-primary mt-3" (click)="searchUser()">Search</button>
+
+
+<div *ngIf="selectedUser" class="Search_Result">
+    <h1>{{selectedUser.name}}</h1>
+    <h1>{{selectedUser.lastName}}</h1>
+    <img src="{{selectedUser.userImage}}" alt="">
+</div>
